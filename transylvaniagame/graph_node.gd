@@ -23,12 +23,19 @@ func _on_button_pressed() -> void:
 func move_player():
 	player = Global.turn
 	var current_player = $"../../Players".get_node("Player"+str(player))
-	print("PLAYERRRR"+str("Player"+str(player)))
-	if Global.turn > 0 and Global.turn < Global.player_count:
-		current_player.position = position
-		var from_node = $"..".get_node("Node"+str(current_player.get_pos()))
-		from_node.move_clear()
-		current_player.set_pos(get_index_from_name())
+	#if Global.turn > 0 and Global.turn < Global.player_count:
+		##current_player.position = position
+		##var from_node = $"..".get_node("Node"+str(current_player.get_pos()))
+		##from_node.move_clear()
+		##current_player.set_pos(get_index_from_name())
+	#else:
+	print("PLAYERRRR"+str("Player"+str(Global.turn)))
+		
+	current_player.position = position
+	var from_node = $"..".get_node("Node"+str(current_player.get_pos()))
+	from_node.move_clear()
+	current_player.set_pos(get_index_from_name())
+
 
 func move_clear():
 	player = -1
