@@ -3,7 +3,7 @@ extends Node
 
 var player_count: int = 0
 var map = {
-	1:[2,3],
+	1:[2,5,13],
 	2:[1,4],
 	3:[1,4],
 	4:[2,3]
