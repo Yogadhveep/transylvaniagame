@@ -24,7 +24,6 @@ func _on_button_pressed() -> void:
 		move_player()
 		if Global.alive <= 1:
 			get_tree().change_scene_to_file("res://end_game.tscn")
-		
 	
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(false)
 	Global.turn_ended()
@@ -32,6 +31,8 @@ func _on_button_pressed() -> void:
 	
 	Global.remove_moves($"..")
 	Global.set_moves($"..",$"../../Players".get_node("Player"+str(Global.turn)).get_pos())
+	
+	
 	
 
 func move_player():

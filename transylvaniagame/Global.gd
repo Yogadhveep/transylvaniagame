@@ -22,6 +22,15 @@ var turn = 1
 var highlighted_moves = []
 var dead = []
 var alive = -1
+var roles = {
+	1:"Dracula",
+	2:"Frankenstein",
+	3:"Murray",
+	4:"Wayne",
+	5:"Griffin",
+	6:"Blobby"
+}
+var player_roles = {}
 
 
 func get_connected(node):

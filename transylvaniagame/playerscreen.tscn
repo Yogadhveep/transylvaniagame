@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c25ba63v3yvne"]
+[gd_scene load_steps=4 format=3 uid="uid://djbiycsyhftgl"]
 
 [ext_resource type="Script" path="res://turnscreen.gd" id="1_qmn4i"]
 [ext_resource type="Texture2D" uid="uid://c5fg5nn5i1tdp" path="res://Dracula.png" id="2_oyxnk"]
@@ -16,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_qmn4i")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 10
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,5 +49,15 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 theme_override_font_sizes/font_size = 30
 text = "Start"
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 9
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.298039, 0.298039, 0.298039, 1)
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]

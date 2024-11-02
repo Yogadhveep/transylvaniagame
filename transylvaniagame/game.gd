@@ -12,11 +12,12 @@ var colors = {
 }
 
 
-
 func _ready():
 	# Instead of using setget, we directly call the function to set player_count
 	set_player_count()
 	Global.set_moves($Graph, get_node("Players").get_node("Player1").get_pos())
+	print(Global.player_roles)
+	print(Global.roles)
 
 func set_player_count() -> void:
 	for i in range(Global.player_count):
@@ -43,6 +44,15 @@ func position_player(player, index):
 			player.position = random_node.position
 			random_node.occupy_by(index)
 			player.set_circle_color(colors[index],index)
+			Global.player_roles[index] = get_role()
 			if index == 1:
 				player.selected(true)
-	
+func get_role():
+	var available_roles = {}
+	for role_key in Global.roles:
+		if Global.roles[role_key] not in Global.player_roles:
+			print("1:"+Global.roles[role_key])
+			available_roles[role_key] = Global.roles[role_key]
+	var values_role = available_roles.keys()
+	var result = values_role[randi_range(0, values_role.size() - 1)]  
+	return result
