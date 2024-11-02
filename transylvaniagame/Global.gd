@@ -20,6 +20,9 @@ var map = {
 }
 var turn = 1
 var highlighted_moves = []
+var dead = []
+var alive = -1
+
 
 func get_connected(node):
 	return map.get(node, [])
@@ -29,6 +32,8 @@ func turn_ended():
 		turn = 1
 	else: 
 		turn = turn +1
+	if turn in dead:
+		turn_ended()
 
 func remove_moves(Graph):
 	for move in highlighted_moves:
@@ -39,3 +44,6 @@ func set_moves(Graph, node):
 	highlighted_moves = map[node]
 	for move in highlighted_moves:
 		Graph.get_node("Node"+str(move)).highlight_node(true)
+func kill(node):
+	dead.append(node)
+	alive = alive -1

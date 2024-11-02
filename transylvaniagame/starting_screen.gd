@@ -17,4 +17,5 @@ func _on_cancel_pressed() -> void:
 
 func _on_start_game_pressed() -> void:
 	Global.player_count = $VBoxContainer/PlayerCountCont2/PlayerCount.value
+	Global.alive = Global.player_count
 	get_tree().change_scene_to_file("res://Game.tscn")

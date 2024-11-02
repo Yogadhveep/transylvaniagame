@@ -18,6 +18,13 @@ func _on_button_pressed() -> void:
 		move_player()
 	else:
 		print("ENGAGE")
+		Global.kill(player)
+		$"../../Players".get_node("Player"+str(player)).get_node("Label").visible = false
+		$"../../Players".get_node("Player"+str(player)).visible = false
+		move_player()
+		if Global.alive <= 1:
+			get_tree().change_scene_to_file("res://end_game.tscn")
+		
 	
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(false)
 	Global.turn_ended()
