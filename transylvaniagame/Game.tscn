@@ -1,9 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ba8q5js6hbxif"]
+[gd_scene load_steps=5 format=3 uid="uid://ba8q5js6hbxif"]
 
 [ext_resource type="Script" path="res://game.gd" id="1_m3clw"]
+[ext_resource type="Script" path="res://graph_node.gd" id="2_d3mre"]
+[ext_resource type="Texture2D" uid="uid://b81tcfxa6qt41" path="res://final map.png" id="4_y0snq"]
 [ext_resource type="Texture2D" uid="uid://daqk5sjkb8lqk" path="res://Node.png" id="5_gn2fd"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_pduai"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -12,20 +12,39 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
 script = ExtResource("1_m3clw")
 
 [node name="Graph" type="Node" parent="."]
 
 [node name="Node1" type="Node2D" parent="Graph"]
 position = Vector2(200, 200)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
 
 [node name="Sprite2D" type="Sprite2D" parent="Graph/Node1"]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_gn2fd")
 
-[node name="Area2D" type="Area2D" parent="Graph/Node1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/Node1/Area2D"]
-shape = SubResource("CircleShape2D_pduai")
+[node name="Button" type="Button" parent="Graph/Node1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Players" type="Node" parent="."]
+
+[node name="FinalMap" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(576, 324)
+scale = Vector2(0.576, 0.467195)
+texture = ExtResource("4_y0snq")
+
+[connection signal="pressed" from="Graph/Node1/Button" to="Graph/Node1" method="_on_button_pressed"]
