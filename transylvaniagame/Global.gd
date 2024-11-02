@@ -9,3 +9,6 @@ var map = {
 	4:[2,3]
 }
 var turn = 1
+
+func get_connected(node):
+	return map.get(node, [])

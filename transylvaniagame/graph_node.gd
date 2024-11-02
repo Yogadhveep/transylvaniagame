@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var active = false
+var player = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,4 +13,5 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_button_pressed() -> void:
-	print("Left mouse button clicked in the area!")
+	if player == -1:
+		current_player = $"../../Players".get_node("Player")
