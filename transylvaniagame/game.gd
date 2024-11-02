@@ -2,6 +2,17 @@ extends Control
 
 # Declare player_count with the correct syntax and remove setget if you’re directly calling a setter function.
 
+var colors = {
+	1: Color(1, 0, 0),       # Red
+	2: Color(0, 0.5, 0),       # Green
+	3: Color(0, 0, 1),       # Blue
+	4: Color(1, 0.5, 0),       # Orange
+	5: Color(1, 0, 1),       # Magenta
+	6: Color(0.5, 0, 0.5)       # Magenta
+}
+
+
+
 func _ready():
 	# Instead of using setget, we directly call the function to set player_count
 	set_player_count()
@@ -29,4 +40,7 @@ func position_player(player, index):
 			player.set_pos(random_num)
 			player.position = random_node.position
 			random_node.occupy_by(index)
+			player.set_circle_color(colors[index],index)
+			if index == 1:
+				player.selected(true)
 	

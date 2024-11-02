@@ -21,10 +21,13 @@ func _on_button_pressed() -> void:
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(false)
 	Global.turn_ended()
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(true)
+<<<<<<< Updated upstream
 	
 	var connections = Global.get_connected(get_index_from_name())
 	for connection in connections:
 		get_parent().get_node("Node"+str(connection)).highlight_node(false)
+=======
+>>>>>>> Stashed changes
 	
 
 func move_player():
