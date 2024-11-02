@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://cknvv5cj7hpfu"]
+[gd_scene load_steps=4 format=3 uid="uid://ba8q5js6hbxif"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Script" path="res://game.gd" id="1_m3clw"]
+[ext_resource type="Texture2D" uid="uid://daqk5sjkb8lqk" path="res://Node.png" id="5_gn2fd"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pduai"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m3clw")
+
+[node name="Graph" type="Node" parent="."]
+
+[node name="Node1" type="Node2D" parent="Graph"]
+position = Vector2(200, 200)
+
+[node name="Sprite2D" type="Sprite2D" parent="Graph/Node1"]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_gn2fd")
+
+[node name="Area2D" type="Area2D" parent="Graph/Node1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Graph/Node1/Area2D"]
+shape = SubResource("CircleShape2D_pduai")
+
+[node name="Players" type="Node" parent="."]

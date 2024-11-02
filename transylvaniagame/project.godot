@@ -15,6 +15,10 @@ run/main_scene="res://MainScreen.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*res://Global.gd"
+
 [dotnet]
 
 project/assembly_name="TransylvaniaGame"
