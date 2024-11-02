@@ -1,21 +1,26 @@
 [gd_scene load_steps=3 format=3 uid="uid://b4a353g24xxyw"]
 
-[ext_resource type="Texture2D" uid="uid://bjueavil0rt25" path="res://FinalCharacter.png" id="1_yffbp"]
+[ext_resource type="Script" path="res://circle.gd" id="2_i708i"]
 
-[sub_resource type="GDScript" id="GDScript_figwg"]
-script/source = "extends Sprite2D
+[sub_resource type="LabelSettings" id="LabelSettings_ykmxq"]
+font_size = 24
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
 
-var node : int
+[node name="Node2D" type="Node2D"]
+script = ExtResource("2_i708i")
 
-
-func set_pos(pos):
-	node = pos
-
-func get_pos():
-	return node
-"
-
-[node name="Player1" type="Sprite2D"]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_yffbp")
-script = SubResource("GDScript_figwg")
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_ykmxq")
+horizontal_alignment = 1

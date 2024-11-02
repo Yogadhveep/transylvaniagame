@@ -14,7 +14,7 @@ func create_player(index: int) -> void:
 	# Example of creating player instances
 	print("Creating player:", index + 1)
 	var new_player = preload("res://Player.tscn").instantiate()
-	new_player.name = "Player"+str(index)
+	new_player.name = "Player"+str(index+1)
 	position_player(new_player,index+1)
 	# Add it to the current scene
 	$Players.add_child(new_player)

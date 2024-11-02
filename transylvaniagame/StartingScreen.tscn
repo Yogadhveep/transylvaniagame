@@ -40,7 +40,7 @@ label_settings = SubResource("LabelSettings_81xcl")
 [node name="PlayerCount" type="SpinBox" parent="VBoxContainer/PlayerCountCont2"]
 layout_mode = 2
 min_value = 2.0
-max_value = 10.0
+max_value = 6.0
 value = 2.0
 
 [node name="FinishedCont" type="HBoxContainer" parent="VBoxContainer"]
