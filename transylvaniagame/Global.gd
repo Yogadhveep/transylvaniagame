@@ -12,3 +12,9 @@ var turn = 1
 
 func get_connected(node):
 	return map.get(node, [])
+
+func turn_ended():
+	if turn >= player_count:
+		turn = 0
+	else: 
+		turn = turn +1
