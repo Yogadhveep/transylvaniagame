@@ -5,8 +5,7 @@ var player = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	get_node("Button").disabled = false
-	pass # Replace with function body.
+	highlight_node(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,34 +14,29 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	if player == -1:
+		print("MOVE")
 		move_player()
 	else:
 		print("ENGAGE")
+	
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(false)
 	Global.turn_ended()
 	$"../../Players".get_node("Player"+str(Global.turn)).selected(true)
-<<<<<<< Updated upstream
 	
-	var connections = Global.get_connected(get_index_from_name())
-	for connection in connections:
-		get_parent().get_node("Node"+str(connection)).highlight_node(false)
-=======
->>>>>>> Stashed changes
+	Global.remove_moves($"..")
+	Global.set_moves($"..",$"../../Players".get_node("Player"+str(Global.turn)).get_pos())
 	
 
 func move_player():
 	var current_player = $"../../Players".get_node("Player"+str(Global.turn))
-
+	player = Global.turn
 	current_player.position = position
-	var from_node = $"..".get_node("Node"+str(current_player.get_pos()))
+	var from_node = get_parent().get_node("Node"+str(current_player.get_pos()))
 	from_node.move_clear()
 	current_player.set_pos(get_index_from_name())
 func move_clear():
+	print("CLEARED")
 	player = -1
-func highlight_moves():
-	var connections = Global.get_connected(get_index_from_name())
-	for connection in connections:
-		get_parent().get_node("Node"+str(connection)).highlight_node(true)
 func occuppied():
 	if player != -1:
 		return true
@@ -62,3 +56,4 @@ func get_index_from_name() -> int:
 
 func highlight_node(enable):
 	get_node("Button").disabled = not enable
+	get_node("Button").visible = enable

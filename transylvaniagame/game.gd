@@ -16,10 +16,12 @@ var colors = {
 func _ready():
 	# Instead of using setget, we directly call the function to set player_count
 	set_player_count()
+	Global.set_moves($Graph, get_node("Players").get_node("Player1").get_pos())
 
 func set_player_count() -> void:
 	for i in range(Global.player_count):
 		create_player(i)
+	
 
 func create_player(index: int) -> void:
 	# Example of creating player instances
