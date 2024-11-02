@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://game.gd" id="1_m3clw"]
 [ext_resource type="Script" path="res://graph_node.gd" id="2_d3mre"]
+[ext_resource type="StyleBox" uid="uid://bbrytb10k42h5" path="res://AlllowedMoved.tres" id="3_ataf8"]
 [ext_resource type="Texture2D" uid="uid://b81tcfxa6qt41" path="res://final map.png" id="4_y0snq"]
-[ext_resource type="Texture2D" uid="uid://daqk5sjkb8lqk" path="res://Node.png" id="5_gn2fd"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -22,10 +22,6 @@ position = Vector2(200, 200)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
 
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node1"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
-
 [node name="Button" type="Button" parent="Graph/Node1"]
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,15 +34,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node2" type="Node2D" parent="Graph"]
 position = Vector2(350, 175)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node2"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node2"]
 anchors_preset = 8
@@ -60,15 +53,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node3" type="Node2D" parent="Graph"]
 position = Vector2(525, 325)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node3"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node3"]
 anchors_preset = 8
@@ -82,15 +72,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node4" type="Node2D" parent="Graph"]
 position = Vector2(250, 350)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node4"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node4"]
 anchors_preset = 8
@@ -104,15 +91,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node5" type="Node2D" parent="Graph"]
 position = Vector2(550, 150)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node5"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node5"]
 anchors_preset = 8
@@ -126,15 +110,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node6" type="Node2D" parent="Graph"]
 position = Vector2(515, 500)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node6"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node6"]
 anchors_preset = 8
@@ -148,15 +129,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node7" type="Node2D" parent="Graph"]
 position = Vector2(400, 500)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node7"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node7"]
 anchors_preset = 8
@@ -170,15 +148,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node8" type="Node2D" parent="Graph"]
 position = Vector2(175, 535)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node8"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node8"]
 anchors_preset = 8
@@ -192,15 +167,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node9" type="Node2D" parent="Graph"]
 position = Vector2(675, 500)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node9"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node9"]
 anchors_preset = 8
@@ -214,15 +186,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node10" type="Node2D" parent="Graph"]
 position = Vector2(700, 250)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node10"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node10"]
 anchors_preset = 8
@@ -236,15 +205,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node11" type="Node2D" parent="Graph"]
 position = Vector2(875, 350)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node11"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node11"]
 anchors_preset = 8
@@ -258,15 +224,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node12" type="Node2D" parent="Graph"]
 position = Vector2(1025, 360)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node12"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node12"]
 anchors_preset = 8
@@ -280,15 +243,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node13" type="Node2D" parent="Graph"]
 position = Vector2(975, 175)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node13"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node13"]
 anchors_preset = 8
@@ -302,15 +262,12 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Node14" type="Node2D" parent="Graph"]
 position = Vector2(900, 485)
 scale = Vector2(2, 2)
 script = ExtResource("2_d3mre")
-
-[node name="Sprite2D" type="Sprite2D" parent="Graph/Node14"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("5_gn2fd")
 
 [node name="Button" type="Button" parent="Graph/Node14"]
 anchors_preset = 8
@@ -324,6 +281,7 @@ offset_right = 10.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
 
 [node name="Players" type="Node" parent="."]
 
