@@ -32,7 +32,30 @@ var roles = {
 }
 var player_roles = {}
 
+var transylvania_table = {
+	1:[1.00,0.90,0.75,0.50,0.25,0.10],
+	2:[0.10,1.00,0.90,0.75,0.50,0.25],
+	3:[0.25,0.10,1.00,0.90,0.75,0.50],
+	4:[0.50,0.25,0.10,1.00,0.90,0.75],
+	5:[0.75,0.50,0.25,0.10,1.00,0.90],
+	6:[0.90,0.75,0.50,0.25,0.10,1.00]
+}
 
+
+func reset():
+	turn = 1
+	highlighted_moves = []
+	dead = []
+	alive = -1
+	roles = {
+		1:"Dracula",
+		2:"Frankenstein",
+		3:"Murray",
+		4:"Wayne",
+		5:"Griffin",
+		6:"Blobby"
+	}
+	player_roles = {}
 func get_connected(node):
 	return map.get(node, [])
 

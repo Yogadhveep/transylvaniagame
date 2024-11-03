@@ -18,6 +18,7 @@ func _ready():
 	Global.set_moves($Graph, get_node("Players").get_node("Player1").get_pos())
 	print(Global.player_roles)
 	print(Global.roles)
+	$Control.show_new_turn()
 
 func set_player_count() -> void:
 	for i in range(Global.player_count):
@@ -50,8 +51,7 @@ func position_player(player, index):
 func get_role():
 	var available_roles = {}
 	for role_key in Global.roles:
-		if Global.roles[role_key] not in Global.player_roles:
-			print("1:"+Global.roles[role_key])
+		if role_key not in Global.player_roles.values():
 			available_roles[role_key] = Global.roles[role_key]
 	var values_role = available_roles.keys()
 	var result = values_role[randi_range(0, values_role.size() - 1)]  

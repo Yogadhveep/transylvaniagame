@@ -29,3 +29,8 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "EXAMPLE"
 label_settings = SubResource("LabelSettings_thlx5")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

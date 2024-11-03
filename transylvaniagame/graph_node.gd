@@ -18,10 +18,13 @@ func _on_button_pressed() -> void:
 		move_player()
 	else:
 		print("ENGAGE")
-		Global.kill(player)
-		$"../../Players".get_node("Player"+str(player)).get_node("Label").visible = false
-		$"../../Players".get_node("Player"+str(player)).visible = false
-		move_player()
+		var dead_player = random_option(Global.turn,player)
+		var move_question_mark = should_move(Global.turn,player,dead_player)
+		Global.kill(dead_player)
+		$"../../Players".get_node("Player"+str(dead_player)).get_node("Label").visible = false
+		$"../../Players".get_node("Player"+str(dead_player)).visible = false
+		if move_question_mark:
+			move_player()
 		if Global.alive <= 1:
 			get_tree().change_scene_to_file("res://end_game.tscn")
 	
@@ -32,8 +35,21 @@ func _on_button_pressed() -> void:
 	Global.remove_moves($"..")
 	Global.set_moves($"..",$"../../Players".get_node("Player"+str(Global.turn)).get_pos())
 	
+	$"../../Control".show_new_turn()
 	
-	
+func random_option(attacker, defender):
+	var prob = Global.transylvania_table[attacker][defender-1]
+	var random_value = randi() % 100  # Get a random number between 0 and 99
+	if random_value < prob:
+		return defender  # 70% chance
+	else:
+		return defender  # 30% chance
+
+func should_move(attacker, defender, selected):
+	if attacker == selected:
+		return false
+	else:
+		return true
 
 func move_player():
 	var current_player = $"../../Players".get_node("Player"+str(Global.turn))
