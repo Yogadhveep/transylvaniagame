@@ -54,17 +54,5 @@ func show_new_turn():
 	enable_movement(false)
 	
 func enable_movement(enabled):
-	$"../Graph/Node1/Button".disabled = not enabled
-	$"../Graph/Node2/Button".disabled = not enabled
-	$"../Graph/Node3/Button".disabled = not enabled
-	$"../Graph/Node4/Button".disabled = not enabled
-	$"../Graph/Node5/Button".disabled = not enabled
-	$"../Graph/Node6/Button".disabled = not enabled
-	$"../Graph/Node7/Button".disabled = not enabled
-	$"../Graph/Node8/Button".disabled = not enabled
-	$"../Graph/Node9/Button".disabled = not enabled
-	$"../Graph/Node10/Button".disabled = not enabled
-	$"../Graph/Node11/Button".disabled = not enabled
-	$"../Graph/Node12/Button".disabled = not enabled
-	$"../Graph/Node13/Button".disabled = not enabled
-	$"../Graph/Node14/Button".disabled = not enabled
+	for i in range(1,15):
+		$"../Graph".get_node("Node"+str(i)).get_node("Button").disabled = not enabled

@@ -1,0 +1,326 @@
+[gd_scene load_steps=6 format=3 uid="uid://dnalxvfjdkaff"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_m3clw"]
+[ext_resource type="Script" path="res://graph_node.gd" id="2_d3mre"]
+[ext_resource type="StyleBox" uid="uid://bbrytb10k42h5" path="res://AlllowedMoved.tres" id="3_ataf8"]
+[ext_resource type="Texture2D" uid="uid://b81tcfxa6qt41" path="res://final map.png" id="4_y0snq"]
+[ext_resource type="PackedScene" uid="uid://djbiycsyhftgl" path="res://playerscreen.tscn" id="5_omso4"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_m3clw")
+
+[node name="Graph" type="Node" parent="."]
+
+[node name="Node1" type="Node2D" parent="Graph"]
+position = Vector2(200, 200)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node1"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node2" type="Node2D" parent="Graph"]
+position = Vector2(350, 175)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node3" type="Node2D" parent="Graph"]
+position = Vector2(525, 325)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node3"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node4" type="Node2D" parent="Graph"]
+position = Vector2(250, 350)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node4"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node5" type="Node2D" parent="Graph"]
+position = Vector2(550, 150)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node5"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node6" type="Node2D" parent="Graph"]
+position = Vector2(515, 500)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node6"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node7" type="Node2D" parent="Graph"]
+position = Vector2(400, 500)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node7"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node8" type="Node2D" parent="Graph"]
+position = Vector2(175, 535)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node8"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node9" type="Node2D" parent="Graph"]
+position = Vector2(675, 500)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node9"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node10" type="Node2D" parent="Graph"]
+position = Vector2(700, 250)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node10"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node11" type="Node2D" parent="Graph"]
+position = Vector2(875, 350)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node11"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node12" type="Node2D" parent="Graph"]
+position = Vector2(1025, 360)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node12"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node13" type="Node2D" parent="Graph"]
+position = Vector2(975, 175)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node13"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Node14" type="Node2D" parent="Graph"]
+position = Vector2(900, 485)
+scale = Vector2(2, 2)
+script = ExtResource("2_d3mre")
+
+[node name="Button" type="Button" parent="Graph/Node14"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = ExtResource("3_ataf8")
+
+[node name="Players" type="Node" parent="."]
+
+[node name="FinalMap" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(576, 324)
+scale = Vector2(0.576, 0.467195)
+texture = ExtResource("4_y0snq")
+
+[node name="Control" parent="." instance=ExtResource("5_omso4")]
+visible = false
+layout_mode = 1
+
+[node name="CheckBox" type="CheckBox" parent="."]
+z_index = 15
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "ALLIANCE"
+
+[connection signal="pressed" from="Graph/Node1/Button" to="Graph/Node1" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node2/Button" to="Graph/Node2" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node3/Button" to="Graph/Node3" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node4/Button" to="Graph/Node4" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node5/Button" to="Graph/Node5" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node6/Button" to="Graph/Node6" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node7/Button" to="Graph/Node7" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node8/Button" to="Graph/Node8" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node9/Button" to="Graph/Node9" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node10/Button" to="Graph/Node10" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node11/Button" to="Graph/Node11" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node12/Button" to="Graph/Node12" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node13/Button" to="Graph/Node13" method="_on_button_pressed"]
+[connection signal="pressed" from="Graph/Node14/Button" to="Graph/Node14" method="_on_button_pressed"]

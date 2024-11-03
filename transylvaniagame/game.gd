@@ -37,7 +37,7 @@ func create_player(index: int) -> void:
 func position_player(player, index):
 	var not_found = true
 	while not_found:
-		var random_num = RandomNumberGenerator.new().randi_range(1, 14)
+		var random_num = RandomNumberGenerator.new().randi_range(1, 15)
 		var random_node = get_node("Graph").get_node("Node"+str(random_num))
 		if !random_node.occuppied():
 			not_found = false
