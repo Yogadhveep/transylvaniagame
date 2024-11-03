@@ -2,6 +2,7 @@ extends Node2D
 
 
 var player = -1
+var safe_player = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,8 +12,35 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+func get_safety():
+	return safe_player
+
+func alliance():
+	if player == -1:
+		print("Failed alliance")
+		return
+	
+	$"..".get_node("Node"+str($"../../Players".get_node("Player"+str(Global.turn)).get_pos())).safe_player = get_index_from_name()
+	print("SFASAFESFAEFSAFAFAFS")
+	print($"..".get_node("Node"+str($"../../Players".get_node("Player"+str(Global.turn)).get_pos())).safe_player)
+	print("ONONONONON")
+	print($"..".get_node("Node"+str($"../../Players".get_node("Player"+str(Global.turn)).get_pos())).get_index_from_name())
+	
+	$"../../Players".get_node("Player"+str(Global.turn)).selected(false)
+	Global.turn_ended()
+	$"../../Players".get_node("Player"+str(Global.turn)).selected(true)
+	
+	Global.remove_moves($"..")
+	Global.set_moves($"..",$"../../Players".get_node("Player"+str(Global.turn)).get_pos())
+	
+	$"../../Control".show_new_turn()
+	$"../../CheckBox".button_pressed = false
 
 func _on_button_pressed() -> void:
+	if $"../../CheckBox".button_pressed:
+		alliance()
+		return
+	$"..".get_node("Node"+str($"../../Players".get_node("Player"+str(Global.turn)).get_pos())).safe_player = -1
 	if player == -1:
 		print("MOVE")
 		move_player()
@@ -36,14 +64,15 @@ func _on_button_pressed() -> void:
 	Global.set_moves($"..",$"../../Players".get_node("Player"+str(Global.turn)).get_pos())
 	
 	$"../../Control".show_new_turn()
+	$"../../CheckBox".button_pressed = false
 	
 func random_option(attacker, defender):
 	var prob = Global.transylvania_table[attacker][defender-1]
 	var random_value = randi() % 100  # Get a random number between 0 and 99
 	if random_value < prob:
-		return defender  # 70% chance
+		return attacker
 	else:
-		return defender  # 30% chance
+		return defender
 
 func should_move(attacker, defender, selected):
 	if attacker == selected:

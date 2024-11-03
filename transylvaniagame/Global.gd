@@ -13,11 +13,12 @@ var map = {
 	8:[7],
 	9:[3],
 	10:[3,11,13],
-	11:[10,12,14],
+	11:[10,12,13,14],
 	12:[11,13],
-	13:[10,12],
+	13:[10,11,12],
 	14:[11]
 }
+## 11 and 13
 var turn = 1
 var highlighted_moves = []
 var dead = []
@@ -75,7 +76,15 @@ func remove_moves(Graph):
 func set_moves(Graph, node):
 	highlighted_moves = map[node]
 	for move in highlighted_moves:
-		Graph.get_node("Node"+str(move)).highlight_node(true)
+		print("NODE")
+		print(node)
+		print("SAFETY")
+		print(Graph.get_node("Node"+str(move)).get_safety())
+		print("MOVE")
+		print(move)
+		if Graph.get_node("Node"+str(move)).get_safety() != node:
+			Graph.get_node("Node"+str(move)).highlight_node(true)
+	
 func kill(node):
 	dead.append(node)
 	alive = alive -1

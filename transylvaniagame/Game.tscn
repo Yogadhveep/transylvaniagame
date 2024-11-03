@@ -293,7 +293,22 @@ scale = Vector2(0.576, 0.467195)
 texture = ExtResource("4_y0snq")
 
 [node name="Control" parent="." instance=ExtResource("5_omso4")]
+visible = false
 layout_mode = 1
+
+[node name="CheckBox" type="CheckBox" parent="."]
+z_index = 15
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -24.0
+offset_top = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "ALLIANCE"
 
 [connection signal="pressed" from="Graph/Node1/Button" to="Graph/Node1" method="_on_button_pressed"]
 [connection signal="pressed" from="Graph/Node2/Button" to="Graph/Node2" method="_on_button_pressed"]
